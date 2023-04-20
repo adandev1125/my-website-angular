@@ -1,0 +1,98 @@
+<div class="fixed top-0 w-full flex justify-between px-32 py-8 items-center bg-[#fffffff0] backdrop-blur-sm z-50">
+  <div class="font-extrabold items-end text-2xl uppercase tracking-wider">
+    <span class="text-lightAccent">Adan</span>
+    <span class="ml-4">Yonai</span>
+  </div>
+  <nav class="flex flex-row space-x-8 uppercase text-lg">
+    <a class="link" href="#">Home</a>
+    <a class="link" href="#">About me</a>
+    <a class="link" href="#">Services</a>
+    <a class="link" href="#">Experience</a>
+    <a class="link" href="#">Contact</a>
+  </nav>
+</div>
+<section id="hero" class="w-full h-[100vh] flex items-center justify-center px-24 space-x-32">
+  <div class="flex flex-col items-end space-y-8">
+    <div class="text-6xl">
+      👋 I am a
+    </div>
+    <p class="text-6xl">
+      <strong class="font-extrabold text-lightSecondary">Full Stack</strong> Developer
+    </p>
+    <div class="flex space-x-8">
+      <span class="individual">&lt;Creative/&gt;</span>
+      <span class="individual">&lt;Passionate/&gt;</span>
+      <span class="individual">&lt;Optimistic/&gt;</span>
+    </div>
+    <div class="flex space-x-8">
+      <button class="btn">
+        Download Resume
+      </button>
+      <button class="btn-outline">
+        Contact
+      </button>
+    </div>
+  </div>
+
+  <div class="flex-shrink-0 relative w-64 h-64">
+    <div class="w-full h-full -z-10 rounded-[3rem] absolute -top-5 -left-5 bg-lightSecondary -rotate-12"></div>
+    <div class="w-full h-full -z-10 rounded-[3rem] absolute top-5 left-5 border-4 border-lightAccent rotate-12"></div>
+    <img src="assets/my-photo.jpg" class="rounded-[3rem] shadow-lg shadow-[#00000060]" />
+  </div>
+</section>
+
+<section id="aboutme" class="relative w-full flex flex-col items-center">
+  <app-heading>About Me</app-heading>
+  <span class="text-center text-xl leading-[2.5] px-64">
+    <strong class="font-bold text-2xl">
+      I'm Adan Yonai. A Full Stack JavaScript Developer.
+    </strong>
+    <br />
+    Proficient in developing mobile and web apps, creating games, reviewing and optimizing codes and creating and
+    establishing new algorithms and databases. Familiar with various SDLCs and software development methodologies like
+    Agile Software Development and DevOps. Enjoy learning new skills and technologies, love to work in teams and wish to
+    gain professional experiences in the real industry.
+  </span>
+
+  <strong class="font-bold text-2xl mt-24 mb-16">
+    What Can I Do?
+  </strong>
+
+  <div class="flex flex-row space-x-16 flex-wrap justify-center">
+    <div *ngFor="let skill of skills">
+      <app-skill [experience]="skill.experience" [imgSrc]="'assets/' + skillIcons.get(skill.name)"
+        [name]="skill.name"></app-skill>
+    </div>
+  </div>
+
+  <strong class="text-xl mt-8">
+    And more and more...
+  </strong>
+
+</section>
+
+<section id="services" class="w-full flex flex-col items-center">
+  <app-heading>Services</app-heading>
+
+  <div class="w-full grid grid-cols-3 gap-x-8 px-32">
+    <app-service title="Draw Front End" imgSrc="assets/service-front-end.png">
+      Visually stunning and user-friendly websites and web applications that provide a seamless and engaging user
+      experience
+    </app-service>
+
+    <app-service title="Construct Back End" imgSrc="assets/service-back-end.png">
+      Robust and secure server-side infrastructure that powers dynamic websites and web applications
+    </app-service>
+
+    <app-service title="Build Web Games" imgSrc="assets/service-web-game.png">
+      Fun and engaging games that are accessible on browsers and mobile devices, providing a unique and enjoyable
+      experience to users
+    </app-service>
+  </div>
+</section>
+
+<section id="experience" class="w-full flex flex-col items-center">
+  <app-heading>
+    Experience
+  </app-heading>
+</section>

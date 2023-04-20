@@ -1,0 +1,8 @@
+<div class="flex flex-col items-center justify-center mb-8">
+  <div class="w-32 h-32 relative flex items-center justify-center mb-4">
+    <round-progress color="#434BD9" [responsive]="true" [current]="experience" [max]="100" [clockwise]="false"
+      [rounded]="true" [duration]="2000"></round-progress>
+    <img class="w-16 h-16 absolute" [src]="imgSrc" />
+  </div>
+  <span>{{name}}</span>
+</div>

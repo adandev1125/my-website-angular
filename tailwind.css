@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hack:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-8 py-3 rounded-full bg-lightAccent text-white font-normal 
+    hover:scale-[102%] active:scale-95 transition-all ease-out text-xl select-none;
+}
+
+.btn-outline {
+  @apply btn !bg-transparent !border-2 !border-lightAccent !text-lightTextColor;
+}
+
+section {
+  @apply py-24
+}
