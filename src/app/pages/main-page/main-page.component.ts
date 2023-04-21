@@ -8,6 +8,12 @@ import * as $ from 'jquery';
 })
 export class MainPageComponent implements OnInit {
   data = {
+    firstName: 'Adan',
+    lastName: 'Yonai',
+    summary: `Proficient in developing mobile and web apps, creating games, reviewing and optimizing codes and creating and
+    establishing new algorithms and databases. Familiar with various SDLCs and software development methodologies like
+    Agile Software Development and DevOps. Enjoy learning new skills and technologies, love to work in teams and wish to
+    gain professional experiences in the real industry.`,
     features: ['Creative', 'Passionate', 'Optimistic'],
     skills: [
       { name: 'Angular', experience: 70 },
@@ -41,27 +47,33 @@ export class MainPageComponent implements OnInit {
     portfolios: [
       {
         link: 'https://www.hse.ru/en',
-        imgSrc: 'portfolio-1.jpg'
+        imgSrc: 'portfolio-1.jpg',
+        enabled: true
       },
       {
         link: 'https://www.ddz5.com',
-        imgSrc: 'portfolio-2.jpg'
+        imgSrc: 'portfolio-2.jpg',
+        enabled: false
       },
       {
         link: 'https://lebronjamesinnovationcenter.nike.com',
-        imgSrc: 'portfolio-3.jpg'
+        imgSrc: 'portfolio-3.jpg',
+        enabled: true
       },
       {
         link: 'http://lisasellspontevedra.com',
-        imgSrc: 'portfolio-4.jpg'
+        imgSrc: 'portfolio-4.jpg',
+        enabled: true
       },
       {
         link: 'https://ardesignstudio.co.uk',
-        imgSrc: 'portfolio-5.jpg'
+        imgSrc: 'portfolio-5.jpg',
+        enabled: true
       },
       {
         link: 'https://imaginaryones.com',
-        imgSrc: 'portfolio-6.jpg'
+        imgSrc: 'portfolio-6.jpg',
+        enabled: true
       }
     ]
   };

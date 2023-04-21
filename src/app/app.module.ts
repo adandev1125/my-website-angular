@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { NgParticlesModule } from 'ng-particles';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { SkillComponent } from './components/skill/skill.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     RoundProgressModule,
+    NgParticlesModule
   ],
   bootstrap: [AppComponent],
 })

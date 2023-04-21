@@ -1,7 +1,7 @@
 <div class="fixed top-0 w-full flex justify-between px-32 py-8 items-center bg-[#fffffff0] backdrop-blur-sm z-50">
   <div class="font-extrabold items-end text-2xl uppercase tracking-wider">
-    <span class="text-lightAccent">Adan</span>
-    <span class="ml-4">Yonai</span>
+    <span class="text-lightAccent">{{data.firstName}}</span>
+    <span class="ml-4">{{data.lastName}}</span>
   </div>
   <nav class="flex flex-row space-x-8 uppercase text-lg">
     <a class="link" href="#">Home</a>
@@ -55,13 +55,10 @@
   <app-heading>About Me</app-heading>
   <span class="text-center text-xl leading-[2.5] px-64">
     <strong class="font-bold text-2xl">
-      I'm Adan Yonai. A Full Stack JavaScript Developer.
+      I'm {{data.firstName + ' ' + data.lastName}}. A Full Stack JavaScript Developer.
     </strong>
     <br />
-    Proficient in developing mobile and web apps, creating games, reviewing and optimizing codes and creating and
-    establishing new algorithms and databases. Familiar with various SDLCs and software development methodologies like
-    Agile Software Development and DevOps. Enjoy learning new skills and technologies, love to work in teams and wish to
-    gain professional experiences in the real industry.
+    {{data.summary}}
   </span>
 
   <strong class="font-bold text-2xl mt-24 mb-16">
@@ -96,6 +93,6 @@
 
 <section id="experience" class="w-full flex flex-col items-center">
   <app-heading>
-    Portfolios
+    Last Works
   </app-heading>
 </section>

@@ -1,17 +1,20 @@
-<div class="flex flex-col justify-center items-center w-full h-[100vh]">
-  <div class="flex flex-col space-y-8">
-    <div class="text-2xl font-extralight !text-gray-500">
+<div id="first-page" class="relative flex flex-col justify-center items-center w-full h-[100vh]">
+  <div class="z-10 flex flex-col space-y-8">
+    <div class="text-2xl font-mono font-extralight !text-gray-500">
       <app-typewriter delay="0" interval="100" text="Hi, there." />
     </div>
-    <div class="text-5xl font-light !text-lightSecondary">
+    <div class="text-5xl font-mono font-light !text-lightSecondary">
       <app-typewriter delay="1000" interval="100" text="I'm Adan Yonai."></app-typewriter>
     </div>
-    <div class="text-4xl font-extralight">
+    <div class="text-4xl font-mono font-extralight">
       <app-typewriter delay="3000" interval="100" text="A Full Stack Developer."></app-typewriter>
     </div>
   </div>
 
-  <a [routerLink]="['main']" class="btn mt-32 animate-in fade-in slide-in-from-bottom-2 anim-delay-[6s] anim-duration-1000 fill-mode-backwards">
+  <a [routerLink]="['main']"
+    class="z-10 btn mt-32 animate-in fade-in zoom-in-95 slide-in-from-bottom-2 anim-delay-[6s] anim-duration-[1500ms] fill-mode-backwards">
     Are you interested?
   </a>
+  <ng-particles id="particles" [options]="particlesOptions" [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"></ng-particles>
 </div>
