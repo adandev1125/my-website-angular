@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": ["aos"],
+            "allowedCommonJsDependencies": ["aos", "jquery"],
             "outputPath": "dist/my-website-angular",
             "index": "src/index.html",
             "main": "src/main.ts",

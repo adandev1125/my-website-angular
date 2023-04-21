@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'my-website-angular';
 
   constructor() {
-    Aos.init();
+    Aos.init({
+      duration: 1000,
+    });
   }
 }

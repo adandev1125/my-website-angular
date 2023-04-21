@@ -7,38 +7,48 @@
     <a class="link" href="#">Home</a>
     <a class="link" href="#">About me</a>
     <a class="link" href="#">Services</a>
-    <a class="link" href="#">Experience</a>
+    <a class="link" href="#">Portfolios</a>
     <a class="link" href="#">Contact</a>
   </nav>
 </div>
-<section id="hero" class="w-full h-[100vh] flex items-center justify-center px-24 space-x-32">
-  <div class="flex flex-col items-end space-y-8">
-    <div class="text-6xl">
-      👋 I am a
+
+<section id="hero" class="w-full h-[100vh] overflow-hidden relative !py-0">
+  <!-- Background Image -->
+  <div class="hero -z-20">
+    <div class="background move-background hero-image"></div>
+  </div>
+
+  <!-- Center Text -->
+  <div class="move-background center w-full flex items-center justify-center space-x-32">
+    <div class="flex flex-col items-end space-y-8">
+      <div class="text-6xl">
+        👋 I am a
+      </div>
+      <p class="text-6xl">
+        <strong class="font-extrabold text-lightSecondary">Full Stack</strong> Developer
+      </p>
+      <div class="flex space-x-8">
+        <div *ngFor="let feature of data.features">
+          <span class="individual">&lt;{{feature}}/&gt;</span>
+        </div>
+      </div>
+      <div class="flex space-x-8">
+        <button class="btn">
+          Download Resume
+        </button>
+        <button class="btn-outline">
+          Contact
+        </button>
+      </div>
     </div>
-    <p class="text-6xl">
-      <strong class="font-extrabold text-lightSecondary">Full Stack</strong> Developer
-    </p>
-    <div class="flex space-x-8">
-      <span class="individual">&lt;Creative/&gt;</span>
-      <span class="individual">&lt;Passionate/&gt;</span>
-      <span class="individual">&lt;Optimistic/&gt;</span>
-    </div>
-    <div class="flex space-x-8">
-      <button class="btn">
-        Download Resume
-      </button>
-      <button class="btn-outline">
-        Contact
-      </button>
+
+    <div class="flex-shrink-0 relative w-64 h-64">
+      <div class="w-full h-full -z-10 rounded-[3rem] absolute -top-5 -left-5 bg-lightSecondary -rotate-12"></div>
+      <div class="w-full h-full -z-10 rounded-[3rem] absolute top-5 left-5 border-4 border-lightAccent rotate-12"></div>
+      <img src="assets/my-photo.jpg" class="rounded-[3rem] shadow-lg shadow-[#00000060]" />
     </div>
   </div>
 
-  <div class="flex-shrink-0 relative w-64 h-64">
-    <div class="w-full h-full -z-10 rounded-[3rem] absolute -top-5 -left-5 bg-lightSecondary -rotate-12"></div>
-    <div class="w-full h-full -z-10 rounded-[3rem] absolute top-5 left-5 border-4 border-lightAccent rotate-12"></div>
-    <img src="assets/my-photo.jpg" class="rounded-[3rem] shadow-lg shadow-[#00000060]" />
-  </div>
 </section>
 
 <section id="aboutme" class="relative w-full flex flex-col items-center">
@@ -59,7 +69,7 @@
   </strong>
 
   <div class="flex flex-row space-x-16 flex-wrap justify-center">
-    <div *ngFor="let skill of skills">
+    <div *ngFor="let skill of data.skills">
       <app-skill [experience]="skill.experience" [imgSrc]="'assets/' + skillIcons.get(skill.name)"
         [name]="skill.name"></app-skill>
     </div>
@@ -75,24 +85,17 @@
   <app-heading>Services</app-heading>
 
   <div class="w-full grid grid-cols-3 gap-x-8 px-32">
-    <app-service title="Draw Front End" imgSrc="assets/service-front-end.png">
-      Visually stunning and user-friendly websites and web applications that provide a seamless and engaging user
-      experience
-    </app-service>
-
-    <app-service title="Construct Back End" imgSrc="assets/service-back-end.png">
-      Robust and secure server-side infrastructure that powers dynamic websites and web applications
-    </app-service>
-
-    <app-service title="Build Web Games" imgSrc="assets/service-web-game.png">
-      Fun and engaging games that are accessible on browsers and mobile devices, providing a unique and enjoyable
-      experience to users
-    </app-service>
+    <div *ngFor="let service of data.services">
+      <app-service [title]="service.title" [imgSrc]="service.imgSrc">
+        {{service.comment}}
+      </app-service>
+    </div>
   </div>
+
 </section>
 
 <section id="experience" class="w-full flex flex-col items-center">
   <app-heading>
-    Experience
+    Portfolios
   </app-heading>
 </section>
