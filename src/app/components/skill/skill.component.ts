@@ -1,19 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.css']
+  styleUrls: ['./skill.component.css'],
 })
-export class SkillComponent {
+export class SkillComponent implements AfterViewInit {
+  @Input()
+  name: string = '';
 
   @Input()
-  name: string = ''
+  experience: number = 0;
 
-  @Input()
-  imgSrc: string = ''
+  ngAfterViewInit(): void {
 
-  @Input()
-  experience: number = 0
-
+  }
 }

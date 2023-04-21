@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -16,13 +16,13 @@ export class MainPageComponent implements OnInit {
     gain professional experiences in the real industry.`,
     features: ['Creative', 'Passionate', 'Optimistic'],
     skills: [
-      { name: 'Angular', experience: 70 },
       { name: 'React', experience: 80 },
-      { name: 'Next.js', experience: 80 },
+      { name: 'React Native', experience: 80 },
       { name: 'Tailwind CSS', experience: 80 },
-      { name: 'three.js', experience: 60 },
-      { name: 'Phaser 3', experience: 80 },
-      { name: 'Laravel', experience: 50 },
+      { name: 'Next.js', experience: 90 },
+      { name: 'GraphQL', experience: 60 },
+      { name: 'Oracle 11g', experience: 80 },
+      { name: 'MongoDB', experience: 70 },
     ],
     services: [
       {
@@ -48,34 +48,36 @@ export class MainPageComponent implements OnInit {
       {
         link: 'https://www.hse.ru/en',
         imgSrc: 'portfolio-1.jpg',
-        enabled: true
+        enabled: true,
       },
       {
         link: 'https://www.ddz5.com',
         imgSrc: 'portfolio-2.jpg',
-        enabled: false
+        enabled: false,
       },
       {
         link: 'https://lebronjamesinnovationcenter.nike.com',
         imgSrc: 'portfolio-3.jpg',
-        enabled: true
+        enabled: true,
       },
       {
         link: 'http://lisasellspontevedra.com',
         imgSrc: 'portfolio-4.jpg',
-        enabled: true
+        enabled: true,
       },
       {
         link: 'https://ardesignstudio.co.uk',
         imgSrc: 'portfolio-5.jpg',
-        enabled: true
+        enabled: true,
       },
       {
         link: 'https://imaginaryones.com',
         imgSrc: 'portfolio-6.jpg',
-        enabled: true
-      }
-    ]
+        enabled: true,
+      },
+    ],
+    email: 'adanyonai@outlook.com',
+    skype: 'live:.cid.4d11e434da2653a0',
   };
 
   skillIcons: Map<string, string> = new Map([
@@ -87,6 +89,8 @@ export class MainPageComponent implements OnInit {
     ['three.js', 'three-js.svg'],
     ['Phaser 3', 'phaser.svg'],
   ]);
+
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     var prevX = 0;
@@ -125,5 +129,10 @@ export class MainPageComponent implements OnInit {
       movedLeft = prevX > event.pageX ? true : false;
       movedUp = prevY > event.pageY ? true : false;
     }
+  }
+
+  scrollToSection(idString:string) {
+    const section = this.elementRef.nativeElement.querySelector('#' + idString);
+    window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
   }
 }

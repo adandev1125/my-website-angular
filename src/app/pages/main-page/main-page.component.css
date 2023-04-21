@@ -2,6 +2,10 @@
   @apply text-gray-500 font-mono text-xl bg-[#ffffffa0] backdrop-blur-sm px-4 py-2 rounded-lg;
 }
 
+.link {
+  @apply uppercase;
+}
+
 div.center {
   position: absolute;
   top: 0;

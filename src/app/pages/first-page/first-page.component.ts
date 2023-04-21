@@ -41,7 +41,7 @@ export class FirstPageComponent implements OnInit {
         color: '#434BD9',
         distance: 150,
         enable: true,
-        opacity: 0.1,
+        opacity: 0.3,
         width: 0.5,
       },
       collisions: {
@@ -60,12 +60,12 @@ export class FirstPageComponent implements OnInit {
       number: {
         density: {
           enable: true,
-          area: 800,
+          area: 1600,
         },
         value: 80,
       },
       opacity: {
-        value: 0.1,
+        value: 0.3,
       },
       shape: {
         type: 'circle',

@@ -28,7 +28,7 @@ import { SkillComponent } from './components/skill/skill.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     RoundProgressModule,
-    NgParticlesModule
+    NgParticlesModule,
   ],
   bootstrap: [AppComponent],
 })
